@@ -23,31 +23,34 @@ const HeroBg = styled.div`
   }
 `;
 const HeroContent = styled.div`
-  position:relative;z-index:2;max-width:720px;padding:0 48px;
+  position:relative;z-index:2;max-width:800px;padding:0 24px;
   animation:${fadeUp} 0.9s ease-out;
-  @media(max-width:768px){padding:0 24px;}
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  margin:0 auto;
 `;
 const HeroTag = styled.span`
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(212,168,67,0.15);border:1px solid rgba(212,168,67,0.3);
   color:#D4A843;padding:8px 18px;border-radius:9999px;font-size:0.85rem;
-  font-weight:600;margin-bottom:20px;letter-spacing:0.5px;
+  font-weight:600;margin-bottom:24px;letter-spacing:0.5px;
   svg{font-size:1.1rem;}
 `;
 const HeroTitle = styled.h1`
-  font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.08;
-  color:#FFFFFF;margin-bottom:20px;
+  font-size:clamp(2.8rem,7vw,4.8rem);font-weight:800;line-height:1.05;
+  color:#FFFFFF;margin-bottom:24px;
   span{color:#D4A843;display:block;}
 `;
 const HeroSub = styled.p`
-  font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.75);
-  max-width:520px;line-height:1.7;margin-bottom:32px;
+  font-size:clamp(1.1rem,2.2vw,1.3rem);color:rgba(255,255,255,0.85);
+  max-width:600px;line-height:1.6;margin-bottom:36px;
 `;
-const HeroActions = styled.div`display:flex;gap:14px;flex-wrap:wrap;`;
+const HeroActions = styled.div`
+  display:flex;gap:16px;flex-wrap:wrap;justify-content:center;
+`;
 const PrimaryBtn = styled(Link)`
   display:inline-flex;align-items:center;gap:10px;
-  background:#D4A843;color:#1E1E1E;padding:16px 36px;border-radius:9999px;
-  font-weight:700;font-size:1rem;letter-spacing:0.3px;
+  background:#D4A843;color:#1E1E1E;padding:16px 40px;border-radius:9999px;
+  font-weight:700;font-size:1.05rem;letter-spacing:0.3px;
   transition:all 0.2s ease;
   &:hover{background:#C49A35;transform:translateY(-3px);box-shadow:0 12px 35px rgba(212,168,67,0.4);}
   svg{font-size:1.2rem;transition:transform 0.2s ease;}
@@ -55,18 +58,20 @@ const PrimaryBtn = styled(Link)`
 `;
 const OutlineBtn = styled(Link)`
   display:inline-flex;align-items:center;gap:10px;
-  background:transparent;color:#F0F0F0;padding:16px 36px;border-radius:9999px;
-  font-weight:600;font-size:1rem;border:2px solid rgba(255,255,255,0.25);
+  background:transparent;color:#F0F0F0;padding:16px 40px;border-radius:9999px;
+  font-weight:600;font-size:1.05rem;border:2px solid rgba(255,255,255,0.25);
   transition:all 0.2s ease;
   &:hover{border-color:#D4A843;color:#D4A843;}
 `;
 const HeroStats = styled.div`
-  display:flex;gap:32px;margin-top:40px;
-  @media(max-width:480px){gap:20px;}
+  display:flex;gap:40px;margin-top:48px;justify-content:center;
+  padding-top:32px;border-top:1px solid rgba(255,255,255,0.1);
+  @media(max-width:480px){gap:24px;}
 `;
 const Stat = styled.div`
-  h4{font-size:clamp(1.4rem,3vw,1.8rem);font-weight:800;color:#D4A843;}
-  p{font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:2px;text-transform:uppercase;letter-spacing:1px;}
+  text-align:center;
+  h4{font-size:clamp(1.5rem,3.5vw,2rem);font-weight:800;color:#D4A843;}
+  p{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-top:4px;text-transform:uppercase;letter-spacing:1px;font-weight:500;}
 `;
 
 /* ─── FEATURES STRIP ─── */
