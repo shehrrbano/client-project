@@ -35,21 +35,31 @@ Since the local "in-memory" database data is lost when the server sleeps, you **
 
 ---
 
-## 3. Deploy Frontend (Vercel)
+## 3. Deploy Frontend (Netlify) - Easiest Method
 
-1.  **Sign Up**: [Vercel.com](https://vercel.com) (Login with GitHub).
-2.  **Add New Project**: Click "Add New..." -> "Project".
-3.  **Import Repo**: Import `client-project`.
-4.  **Configure**:
-    *   **Root Directory**: Click "Edit" and select `client`.
-    *   **Build Command**: Default (`vite build`) is fine.
-    *   **Output Directory**: Default (`dist`) is fine.
+### Option A: Drag & Drop (Manual)
+1.  **Build the App**: Run this command on your computer:
+    ```bash
+    cd client
+    npm run build
+    ```
+    This creates a `dist` folder in `client/dist`.
+2.  **Go to Netlify**: [Netlify Drop](https://app.netlify.com/drop).
+3.  **Upload**: Drag and drop the `client/dist` folder into the upload area.
+4.  **Environment Variables**:
+    *   Go to "Site settings" -> "Environment variables".
+    *   Add `VITE_API_URL` = your Render Backend URL (e.g., `https://ember-grill-api.onrender.com/api`).
+
+### Option B: Connect GitHub (Automatic)
+1.  **Login**: [Netlify](https://app.netlify.com).
+2.  **New Site**: "Add new site" -> "Import an existing project" -> "GitHub".
+3.  **Select Repo**: Choose `client-project`.
+4.  **Settings**:
+    *   **Base directory**: `client`
+    *   **Build command**: `npm run build`
+    *   **Publish directory**: `dist`
 5.  **Environment Variables**:
-    *   Add a new variable:
-        *   **Name**: `VITE_API_URL`
-        *   **Value**: (Paste your Render Backend URL from Step 2) **IMPORTANT: Add `/api` at the end**
-        *   *Example*: `https://ember-grill-api.onrender.com/api`
-6.  **Deploy**: Click "Deploy".
+    *   Add `VITE_API_URL` = your Render Backend URL + `/api`.
 
 ---
 
