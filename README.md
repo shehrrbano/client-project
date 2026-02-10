@@ -1,33 +1,33 @@
-# 🔥 Ember Grill — Food Ordering Website
+# Ember Grill — Food Ordering Website
 
 A full-stack MERN (MongoDB, Express, React, Node.js) food ordering web application for a fast food and grilled food restaurant based in England. Features a modern dark-themed UI with golden yellow accents, fully responsive design, and a complete admin management panel.
 
 ---
 
-## 👩‍💻 Developer
+## Developer
 
 **Shehr Bano**  
 Namal University
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Prerequisites](#-prerequisites)
-- [Installation & Setup](#-installation--setup)
-- [Running the Application](#-running-the-application)
-- [Admin Panel Access](#-admin-panel-access)
-- [API Endpoints](#-api-endpoints)
-- [Color Palette](#-color-palette)
-- [Screenshots](#-screenshots)
-- [License](#-license)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation & Setup](#installation--setup)
+- [Running the Application](#running-the-application)
+- [Admin Panel Access](#admin-panel-access)
+- [API Endpoints](#api-endpoints)
+- [Color Palette](#color-palette)
+- [Screenshots](#screenshots)
+- [License](#license)
 
 ---
 
-## ✨ Features
+## Features
 
 ### Customer Side
 - **Home Page** — Hero banner, featured menu items, feature highlights, and CTA sections
@@ -54,7 +54,7 @@ Namal University
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technologies |
 |-------|-------------|
@@ -68,7 +68,7 @@ Namal University
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ember-grill/
@@ -130,19 +130,19 @@ ember-grill/
 
 ---
 
-## 📌 Prerequisites
+## Prerequisites
 
 Before running the project, make sure you have:
 
 - **Node.js** v18 or higher — [Download](https://nodejs.org/)
-- **MongoDB** — Either:
+- **MongoDB** — Optional! The app includes an in-memory database for instant setup without installation. For data persistence, use:
   - Local MongoDB installation — [Download](https://www.mongodb.com/try/download/community)
   - Free MongoDB Atlas cloud cluster — [Sign Up](https://www.mongodb.com/atlas)
 - **Git** — [Download](https://git-scm.com/)
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the Repository
 
@@ -194,7 +194,7 @@ npm install
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 Open **two separate terminals**:
 
@@ -214,7 +214,7 @@ The React app will launch on **http://localhost:5173**
 
 ---
 
-## 🔐 Admin Panel Access
+## Admin Panel Access
 
 Navigate to **http://localhost:5173/admin/login**
 
@@ -230,7 +230,7 @@ Navigate to **http://localhost:5173/admin/login**
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Products
 | Method | Endpoint | Description | Auth |
@@ -259,7 +259,7 @@ Navigate to **http://localhost:5173/admin/login**
 
 ---
 
-## 🎨 Color Palette
+## Color Palette
 
 | Token | Hex | Preview | Usage |
 |-------|-----|---------|-------|
@@ -273,7 +273,7 @@ Navigate to **http://localhost:5173/admin/login**
 
 ---
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 | Breakpoint | Width | Layout |
 |-----------|-------|--------|
@@ -284,10 +284,10 @@ Navigate to **http://localhost:5173/admin/login**
 
 ---
 
-## 📄 License
+## License
 
 This project is developed as part of academic coursework at **Namal University**.
 
 ---
 
-**Developed with ❤️ by Shehr Bano — Namal University**
+**Developed by Shehr Bano — Namal University**

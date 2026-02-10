@@ -1,4 +1,4 @@
-# 🚀 Hosting Guide for Ember Grill
+# Hosting Guide for Ember Grill
 
 This guide explains how to deploy your MERN stack application for free using **Vercel** (Frontend), **Render** (Backend), and **MongoDB Atlas** (Database).
 
@@ -64,7 +64,7 @@ Since the local "in-memory" database data is lost when the server sleeps, you **
 ---
 
 ## 4. Final Verification
-1.  Open your Vercel URL.
+1.  Open your Netlify URL.
 2.  Try adding an item to the cart.
 3.  Go to `/admin/login` and try to log in (ensure you ran the seed script or manually created an admin in your Atlas DB).
 
