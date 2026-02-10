@@ -11,8 +11,8 @@ const float = keyframes`0%,100%{transform:translateY(0)}50%{transform:translateY
 
 /* ─── HERO SECTION ─── */
 const Hero = styled.section`
-  position:relative;width:100%;height:100vh;min-height:600px;max-height:900px;
-  display:flex;align-items:center;overflow:hidden;
+  position:relative;width:100%;min-height:520px;padding:140px 0 80px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
 `;
 const HeroBg = styled.div`
   position:absolute;inset:0;
@@ -78,10 +78,9 @@ const Stat = styled.div`
 const Strip = styled.section`
   padding: 40px 24px;
   max-width: 1280px;
-  margin: -60px auto 0; /* Overlap hero slightly for floating effect */
+  margin: 0 auto;
   position: relative;
   z-index: 10;
-  @media(max-width: 768px){ margin: 0 auto; padding: 40px 24px; }
 `;
 const StripGrid = styled.div`
   display: grid;
@@ -135,7 +134,7 @@ const StripText = styled.div`
 `;
 
 /* ─── FEATURED SECTION ─── */
-const Section = styled.section`max-width:1280px;margin:0 auto;padding:80px 24px;`;
+const Section = styled.section`max-width:1280px;margin:0 auto;padding:20px 24px 80px;`;
 const SectionHeader = styled.div`
   display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px;
 `;
