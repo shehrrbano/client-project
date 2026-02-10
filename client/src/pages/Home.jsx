@@ -71,28 +71,62 @@ const Stat = styled.div`
 
 /* ─── FEATURES STRIP ─── */
 const Strip = styled.section`
-  background:#2B2B2B;border-top:1px solid #3A3A3A;border-bottom:1px solid #3A3A3A;
-  padding:0;
+  padding: 40px 24px;
+  max-width: 1280px;
+  margin: -60px auto 0; /* Overlap hero slightly for floating effect */
+  position: relative;
+  z-index: 10;
+  @media(max-width: 768px){ margin: 0 auto; padding: 40px 24px; }
 `;
 const StripGrid = styled.div`
-  max-width:1280px;margin:0 auto;display:grid;
-  grid-template-columns:repeat(4,1fr);
-  @media(max-width:768px){grid-template-columns:repeat(2,1fr);}
-  @media(max-width:480px){grid-template-columns:1fr;}
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  @media(max-width: 1024px){ grid-template-columns: repeat(2, 1fr); }
+  @media(max-width: 600px){ grid-template-columns: 1fr; }
 `;
 const StripItem = styled.div`
-  display:flex;align-items:center;gap:14px;padding:28px 24px;
-  border-right:1px solid #3A3A3A;
-  &:last-child{border-right:none;}
-  @media(max-width:768px){border-right:none;border-bottom:1px solid #3A3A3A;&:last-child{border-bottom:none;}}
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 24px;
+  background: linear-gradient(145deg, #2B2B2B, #222);
+  border: 1px solid #3A3A3A;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+
+  &:hover {
+    transform: translateY(-8px);
+    border-color: #D4A843;
+    box-shadow: 0 20px 40px -10px rgba(212, 168, 67, 0.15);
+    
+    div:first-child { /* Targets StripIcon */
+      background: #D4A843;
+      color: #1E1E1E;
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 8px 20px rgba(212, 168, 67, 0.4);
+    }
+  }
 `;
 const StripIcon = styled.div`
-  width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;
-  background:rgba(212,168,67,0.1);color:#D4A843;font-size:1.4rem;flex-shrink:0;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: #D4A843;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.05);
 `;
 const StripText = styled.div`
-  h4{font-size:0.95rem;font-weight:600;color:#F0F0F0;}
-  p{font-size:0.8rem;color:#707070;margin-top:2px;}
+  h4{font-size:1.1rem;font-weight:700;color:#F0F0F0;margin-bottom:4px;}
+  p{font-size:0.9rem;color:#999;line-height:1.4;}
 `;
 
 /* ─── FEATURED SECTION ─── */
