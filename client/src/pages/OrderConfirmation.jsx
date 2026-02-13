@@ -44,34 +44,31 @@ const Btn = styled(Link)`
 `;
 
 const OrderConfirmation = () => {
-    const { id } = useParams();
-    const { state } = useLocation();
-    const order = state?.order;
-    return (
-        <Page>
-            <Icon><HiOutlineCheckCircle /></Icon>
-            <Title>Order Placed!</Title>
-            <Subtitle>Thank you! Your order has been successfully placed.</Subtitle>
-            {order && (
-                <Card>
-                    <Row><span>Order Number</span><span>{order.orderNumber}</span></Row>
-                    <Row><span>Type</span><span style={{ textTransform: 'capitalize' }}>{order.orderType}</span></Row>
-                    <Row><span>Payment</span><span style={{ textTransform: 'capitalize' }}>{order.paymentMethod}</span></Row>
-                    <Row><span>Status</span><span style={{ color: '#D4A843', textTransform: 'capitalize' }}>{order.status}</span></Row>
-                    {order.items?.map((item, i) => (
-                        <Row key={i}><span>{item.quantity}x {item.name}</span><span>£{(item.price * item.quantity).toFixed(2)}</span></Row>
-                    ))}
-                    <TotalRow><span>Total</span><span>£{order.total?.toFixed(2)}</span></TotalRow>
-                </Card>
-            )}
-            <Btns>
-                <Btn to={`/track-order?id=${order?.orderNumber || id}`} $p>
-                    <HiOutlineClipboardList /> Track Order
-                </Btn>
-                <Btn to="/menu">Order More</Btn>
-            </Btns>
-        </Page>
-    );
+  const { id } = useParams();
+  const { state } = useLocation();
+  const order = state?.order;
+  return (
+    <Page>
+      <Icon><HiOutlineCheckCircle /></Icon>
+      <Title>Order Placed!</Title>
+      <Subtitle>Thank you! Your order has been successfully placed.</Subtitle>
+      {order && (
+        <Card>
+          <Row><span>Order Number</span><span>{order.orderNumber}</span></Row>
+          <Row><span>Type</span><span style={{ textTransform: 'capitalize' }}>{order.orderType}</span></Row>
+          <Row><span>Payment</span><span style={{ textTransform: 'capitalize' }}>{order.paymentMethod}</span></Row>
+          <Row><span>Status</span><span style={{ color: '#D4A843', textTransform: 'capitalize' }}>{order.status}</span></Row>
+          {order.items?.map((item, i) => (
+            <Row key={i}><span>{item.quantity}x {item.name}</span><span>£{(item.price * item.quantity).toFixed(2)}</span></Row>
+          ))}
+          <TotalRow><span>Total</span><span>£{order.total?.toFixed(2)}</span></TotalRow>
+        </Card>
+      )}
+      <Btns>
+        <Btn to="/menu">Order More</Btn>
+      </Btns>
+    </Page>
+  );
 };
 
 export default OrderConfirmation;

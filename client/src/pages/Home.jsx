@@ -216,15 +216,14 @@ const Home = () => {
           </HeroTitle>
           <HeroSub>
             Hand-crafted burgers, flame-grilled meats, and bold flavours — made fresh
-            and delivered hot to your door across England.
+            and delivered hot to your door within 3 miles.
           </HeroSub>
           <HeroActions>
             <PrimaryBtn to="/menu">Order Now <HiOutlineArrowRight /></PrimaryBtn>
-            <OutlineBtn to="/track-order">Track Order</OutlineBtn>
           </HeroActions>
           <HeroStats>
             <Stat><h4>26+</h4><p>Menu Items</p></Stat>
-            <Stat><h4>15min</h4><p>Avg. Prep</p></Stat>
+            <Stat><h4>30-45min</h4><p>Avg. Delivery</p></Stat>
             <Stat><h4>4.9★</h4><p>Rating</p></Stat>
           </HeroStats>
         </HeroContent>
@@ -233,10 +232,10 @@ const Home = () => {
       {/* ── FEATURES STRIP ── */}
       <Strip>
         <StripGrid>
-          <StripItem><StripIcon><HiOutlineTruck /></StripIcon><StripText><h4>Fast Delivery</h4><p>Under 30 minutes</p></StripText></StripItem>
+          <StripItem><StripIcon><HiOutlineTruck /></StripIcon><StripText><h4>Fast Delivery</h4><p>30–45 minutes</p></StripText></StripItem>
           <StripItem><StripIcon><HiOutlineFire /></StripIcon><StripText><h4>Flame-Grilled</h4><p>Charcoal perfection</p></StripText></StripItem>
           <StripItem><StripIcon><HiOutlineStar /></StripIcon><StripText><h4>Premium Quality</h4><p>Fresh ingredients daily</p></StripText></StripItem>
-          <StripItem><StripIcon><HiOutlineClock /></StripIcon><StripText><h4>Order Tracking</h4><p>Real-time updates</p></StripText></StripItem>
+          <StripItem><StripIcon><HiOutlineLocationMarker /></StripIcon><StripText><h4>Local Delivery</h4><p>3 Mile Radius</p></StripText></StripItem>
         </StripGrid>
       </Strip>
 

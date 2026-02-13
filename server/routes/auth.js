@@ -12,11 +12,17 @@ const generateToken = (id) => {
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
+
+        console.log(`Login attempt for: ${email}`);
+
         if (!email || !password) {
             return res.status(400).json({ message: 'Please provide email and password' });
         }
 
-        const user = await User.findOne({ email }).select('+password');
+        // Normalize email
+        const normalizedEmail = email.toLowerCase().trim();
+
+        const user = await User.findOne({ email: normalizedEmail }).select('+password');
         if (!user) {
             return res.status(401).json({ message: 'Invalid credentials' });
         }

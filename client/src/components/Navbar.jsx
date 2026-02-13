@@ -49,7 +49,7 @@ const NavLinks = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${({ theme }) => theme.colors.bgDark};
+    background: #1A1A1A; /* Solid dark background */
     flex-direction: column;
     justify-content: flex-start;
     padding-top: ${({ theme }) => theme.spacing.xxl};
@@ -130,34 +130,33 @@ const MobileToggle = styled.button`
 `;
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
-    const { cartCount } = useCart();
-    const location = useLocation();
-    const isActive = (path) => location.pathname === path;
+  const [open, setOpen] = useState(false);
+  const { cartCount } = useCart();
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
 
-    return (
-        <Nav>
-            <NavContainer>
-                <Logo to="/"><MdRestaurantMenu /> Ember Grill</Logo>
-                <NavLinks $open={open}>
-                    <NavLink to="/" $active={isActive('/')} onClick={() => setOpen(false)}>Home</NavLink>
-                    <NavLink to="/menu" $active={isActive('/menu')} onClick={() => setOpen(false)}>Menu</NavLink>
-                    <NavLink to="/track-order" $active={isActive('/track-order')} onClick={() => setOpen(false)}>Track Order</NavLink>
-                    <NavLink to="/admin" $active={location.pathname.startsWith('/admin')} onClick={() => setOpen(false)}>Admin</NavLink>
-                </NavLinks>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <CartBtn to="/cart">
-                        <HiOutlineShoppingBag />
-                        Cart
-                        {cartCount > 0 && <Badge>{cartCount}</Badge>}
-                    </CartBtn>
-                    <MobileToggle onClick={() => setOpen(!open)}>
-                        {open ? <HiOutlineX /> : <HiOutlineMenu />}
-                    </MobileToggle>
-                </div>
-            </NavContainer>
-        </Nav>
-    );
+  return (
+    <Nav>
+      <NavContainer>
+        <Logo to="/"><MdRestaurantMenu /> URBAN GRILL</Logo>
+        <NavLinks $open={open}>
+          <NavLink to="/" $active={isActive('/')} onClick={() => setOpen(false)}>Home</NavLink>
+          <NavLink to="/menu" $active={isActive('/menu')} onClick={() => setOpen(false)}>Menu</NavLink>
+          <NavLink to="/admin" $active={location.pathname.startsWith('/admin')} onClick={() => setOpen(false)}>Admin</NavLink>
+        </NavLinks>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <CartBtn to="/cart">
+            <HiOutlineShoppingBag />
+            Cart
+            {cartCount > 0 && <Badge>{cartCount}</Badge>}
+          </CartBtn>
+          <MobileToggle onClick={() => setOpen(!open)}>
+            {open ? <HiOutlineX /> : <HiOutlineMenu />}
+          </MobileToggle>
+        </div>
+      </NavContainer>
+    </Nav>
+  );
 };
 
 export default Navbar;

@@ -76,35 +76,34 @@ const BottomBar = styled.div`
 `;
 
 const Footer = () => (
-    <FooterWrap>
-        <FooterContainer>
-            <BrandSection>
-                <BrandLogo><MdRestaurantMenu /> Ember Grill</BrandLogo>
-                <p>Authentic flame-grilled flavours and fast food favourites, served with passion in the heart of England.</p>
-            </BrandSection>
-            <FooterSection>
-                <h3>Quick Links</h3>
-                <FooterLink to="/">Home</FooterLink>
-                <FooterLink to="/menu">Our Menu</FooterLink>
-                <FooterLink to="/cart">Your Cart</FooterLink>
-                <FooterLink to="/track-order">Track Order</FooterLink>
-            </FooterSection>
-            <FooterSection>
-                <h3>Categories</h3>
-                <FooterLink to="/menu?category=burgers">Burgers</FooterLink>
-                <FooterLink to="/menu?category=grilled">Grilled</FooterLink>
-                <FooterLink to="/menu?category=wraps">Wraps</FooterLink>
-                <FooterLink to="/menu?category=sides">Sides</FooterLink>
-            </FooterSection>
-            <FooterSection>
-                <h3>Contact Us</h3>
-                <ContactItem><HiOutlineLocationMarker /> 42 High Street, Birmingham, B1 1AA</ContactItem>
-                <ContactItem><HiOutlinePhone /> +44 121 456 7890</ContactItem>
-                <ContactItem><HiOutlineMail /> hello@embergrill.co.uk</ContactItem>
-            </FooterSection>
-        </FooterContainer>
-        <BottomBar>&copy; {new Date().getFullYear()} Ember Grill. All rights reserved.</BottomBar>
-    </FooterWrap>
+  <FooterWrap>
+    <FooterContainer>
+      <BrandSection>
+        <BrandLogo><MdRestaurantMenu /> URBAN GRILL</BrandLogo>
+        <p>Authentic flame-grilled flavours and fast food favourites, served with passion in the heart of the city.</p>
+      </BrandSection>
+      <FooterSection>
+        <h3>Quick Links</h3>
+        <FooterLink to="/">Home</FooterLink>
+        <FooterLink to="/menu">Our Menu</FooterLink>
+        <FooterLink to="/cart">Your Cart</FooterLink>
+      </FooterSection>
+      <FooterSection>
+        <h3>Categories</h3>
+        <FooterLink to="/menu?category=burgers">Burgers</FooterLink>
+        <FooterLink to="/menu?category=grilled">Grilled</FooterLink>
+        <FooterLink to="/menu?category=wraps">Wraps</FooterLink>
+        <FooterLink to="/menu?category=sides">Sides</FooterLink>
+      </FooterSection>
+      <FooterSection>
+        <h3>Contact Us</h3>
+        <ContactItem><HiOutlineLocationMarker /> 42 High Street, Birmingham, B1 1AA</ContactItem>
+        <ContactItem><HiOutlinePhone /> +44 121 456 7890</ContactItem>
+        <ContactItem><HiOutlineMail /> hello@embergrill.co.uk</ContactItem>
+      </FooterSection>
+    </FooterContainer>
+    <BottomBar>&copy; {new Date().getFullYear()} URBAN GRILL. All rights reserved.</BottomBar>
+  </FooterWrap>
 );
 
 export default Footer;

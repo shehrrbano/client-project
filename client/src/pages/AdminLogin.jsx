@@ -39,44 +39,44 @@ const Btn = styled.button`
 `;
 
 const AdminLogin = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [loading, setLoading] = useState(false);
-    const { login } = useAuth();
-    const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        try {
-            await login(email, password);
-            toast.success('Welcome back, Admin!', {
-                style: { background: '#2B2B2B', color: '#F0F0F0', border: '1px solid #D4A843' },
-                iconTheme: { primary: '#D4A843', secondary: '#1E1E1E' },
-            });
-            navigate('/admin');
-        } catch {
-            toast.error('Invalid credentials');
-        } finally { setLoading(false); }
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await login(email, password);
+      toast.success('Welcome back, Admin!', {
+        style: { background: '#2B2B2B', color: '#F0F0F0', border: '1px solid #D4A843' },
+        iconTheme: { primary: '#D4A843', secondary: '#1E1E1E' },
+      });
+      navigate('/admin');
+    } catch {
+      toast.error('Invalid credentials');
+    } finally { setLoading(false); }
+  };
 
-    return (
-        <Page>
-            <Card as="form" onSubmit={handleSubmit}>
-                <Logo><MdRestaurantMenu /> Ember Grill</Logo>
-                <Sub>Admin Panel Login</Sub>
-                <Field>
-                    <label>Email</label>
-                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="admin@embergrill.co.uk" required />
-                </Field>
-                <Field>
-                    <label>Password</label>
-                    <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="••••••••" required />
-                </Field>
-                <Btn type="submit" disabled={loading}>{loading ? 'Signing in...' : 'Sign In'}</Btn>
-            </Card>
-        </Page>
-    );
+  return (
+    <Page>
+      <Card as="form" onSubmit={handleSubmit}>
+        <Logo><MdRestaurantMenu /> URBAN GRILL</Logo>
+        <Sub>Admin Panel Login</Sub>
+        <Field>
+          <label>Email</label>
+          <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="admin@embergrill.co.uk" required />
+        </Field>
+        <Field>
+          <label>Password</label>
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="••••••••" required />
+        </Field>
+        <Btn type="submit" disabled={loading}>{loading ? 'Signing in...' : 'Sign In'}</Btn>
+      </Card>
+    </Page>
+  );
 };
 
 export default AdminLogin;
